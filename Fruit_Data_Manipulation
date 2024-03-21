@@ -1,0 +1,24 @@
+To make my life significantly easier, I defined a process which carves the given data and plots it all at once.
+  Function was named "plot_fruit_data", this is the first section which shows the data being manipulated.
+
+Breakdown of how the data was manipulated to start the function:
+  - Create a dataframe with the supplied data (copy and pasted from CGPT).
+  - Separate the data by year and either farms / acres by selecting the columns.
+  - - - MELT
+  - - - - Geopgraphic Area needs to be changed into an identifier so it can be the X-axis.
+  - - - - Select the column you want to be the variable, then name it something other than the original column (in this case, Acres or number of Farms).        
+
+def plot_fruit_data(data, fruit_name):
+    df = pd.DataFrame(data)
+
+    df = df[df['Geographic_Area'] != 'New Jersey']
+    df_2022_acres = df[['Geographic_Area', 'Total_Acres_2022', 'Bearing_Age_Acres_2022', 'Nonbearing_Age_Acres_2022']]
+    df_2017_acres = df[['Geographic_Area', 'Total_Acres_2017', 'Bearing_Age_Acres_2017', 'Nonbearing_Age_Acres_2017']]
+    df_2022_farms = df[['Geographic_Area', 'Total_Farms_2022', 'Bearing_Age_Farms_2022', 'Nonbearing_Age_Farms_2022']]
+    df_2017_farms = df[['Geographic_Area', 'Total_Farms_2017', 'Bearing_Age_Farms_2017', 'Nonbearing_Age_Farms_2017']]
+
+    df_2022_acres_melted = pd.melt(df_2022_acres, id_vars=['Geographic_Area'], var_name='Acres_Type', value_name='Acres')
+    df_2017_acres_melted = pd.melt(df_2017_acres, id_vars=['Geographic_Area'], var_name='Acres_Type', value_name='Acres')
+
+    df_2022_farms_melted = pd.melt(df_2022_farms, id_vars=['Geographic_Area'], var_name='Farm_Type', value_name='Number_of_Farms')
+    df_2017_farms_melted = pd.melt(df_2017_farms, id_vars=['Geographic_Area'], var_name='Farm_Type', value_name='Number_of_Farms')
