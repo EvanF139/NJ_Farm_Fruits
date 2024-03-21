@@ -9,6 +9,14 @@ Breakdown of how the data was manipulated to start the function:
   - - - - Select the column you want to be the variable, then name it something other than the original column 
   - - - - (in this case, Acres or number of Farms).        
 
+(have to import pandas, numpy, matplotlib, and seaborn)
+1st Cell:
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+2nd Cell:
 def plot_fruit_data(data, fruit_name):
     df = pd.DataFrame(data)
 
