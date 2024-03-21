@@ -1,0 +1,53 @@
+I went into this with the main goal being able to build bar charts, because who doesn't love a good bar chart?
+
+My ideal set up would be 4 bar charts:
+  2022 Farms, 2022 Acres, 2017 Farms, 2017 Acres
+That gives us an extremely high level, but fairly useful idea of where fruits and vegetables will be grown.
+
+ChatGPT did the heavy lifting in terms of formatting, here is how I fed it the data:
+
+Headers of columns: [Geographic_Area; 
+Total_Farms_2022; 
+Total_Acres_2022; 
+Bearing_Age_Farms_2022; 
+Bearing_Age_Acres_2022; 
+Nonbearing_Age_Farms_2022; 
+Nonbearing_Age_Acres_2022; 
+Total_Farms_2017; 
+Total_Acres_2017; 
+Bearing__AGe_Farms_2017; 
+Bearing_Age_Acres_2017; 
+Nonbearing_Age_Farms_2017; 
+Nonbearing_Age_Acres_2017]
+
+Geographic Identifiers:
+"New Jersey", "Atlantic", "Bergen", "Burlington",
+"Camden", "Cape May", "Cumberland", "Essex", "Gloucester",
+"Hudson", "Hunterdon", "Mercer", "Middlesex", "Monmouth",
+"Morris", "Ocean", "Passaic", "Salem", "Somerset", "Sussex", "Warren"
+
+# Kept a copy of the large text table from the website in a Notepad++ file and hand-cleaned the data to look like this:
+
+All Noncitrus
+New Jersey .............................:   799        9,090        636        8,337        409         752         730        8,678        597        7,621        329        1,057    
+Atlantic ...............................:    32          (D)         17          234         21         (D)          37          (D)         35          178         11          (D)    
+Bergen .................................:     7          (D)          7           52          6         (D)           4          (D)          4           40          3          (D)    
+Burlington .............................:    44          187         32          140         27          47          28          (D)         18          165         17          (D)    
+Camden .................................:    12          279          8          233          9          46          16          227         16          (D)          2          (D)    
+Cape May ...............................:    15          (D)         15          (D)          4         (D)          23          147         21          132          7           15    
+Cumberland .............................:    31          (D)         24        2,794         12         (D)          30          (D)         28        2,070         15          (D)    
+Essex ..................................:     1          (D)          1          (D)          -           -           1          (D)          1          (D)          -            -    
+Gloucester .............................:    64        1,853         57        1,788         35          65          60        1,559         44        1,434         26          125    
+Hudson .................................:     2          (D)          2          (D)          2         (D)           -            -          -            -          -            -    
+Hunterdon ..............................:   143          659        120          528         81         131         116          511         92          419         47           92    
+Mercer .................................:    38          343         28          310         24          33          30          (D)         25          (D)         12          (D)    
+Middlesex ..............................:    30          (D)         29           93          6         (D)          21           76         16           71         10            5    
+Monmouth ...............................:    62          467         48          397         31          71          57          488         53          401         22           87    
+Morris .................................:    75          332         40          305         48          27          40          238         36          221         20           17    
+Ocean ..................................:    19          (D)         14           85         12         (D)          16          (D)         11           64          7          (D)    
+Passaic ................................:    13           15         13           14          7           2           9           14          7            7          6            7    
+Salem ..................................:    31          621         27          577         11          44          23          (D)         20        1,214          8          (D)    
+Somerset ...............................:    38           92         33           82         16          10          47           64         34           47         27           16    
+Sussex .................................:    78          365         66          312         30          53          99          389         73          307         54           82    
+Warren .................................:    64          383         55          335         27          48          73          (D)         63          374         35          (D)
+
