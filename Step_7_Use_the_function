@@ -1,0 +1,28 @@
+Now that the function plot_fruit_data has been defined, you can call it.
+
+The overall method is:
+- Feeding CGPT the proper formatting, shown in step 2.
+- Feeding CGPT the new data for each hand-cleaned table (example shown at bottom of step 2).
+- Enter that into a new cell (in your already established Python kernel which includes the function):
+      EXAMPLE:
+_________________________________________________________
+Apples_data = {
+  'Geographic_Area': ['New Jersey', 'Atlantic', 'Bergen', 'Burlington', 'Camden', 'Cape May', 'Cumberland', 'Essex', 'Gloucester', 'Hunterdon', 'Mercer', 'Middlesex', 'Monmouth', 'Morris', 'Ocean', 'Passaic', 'Salem', 'Somerset', 'Sussex', 'Warren'],
+  'Total_Farms_2022': [487, 14, 6, 18, 3, 0, 9, 0, 23, 101, 14, 19, 44, 57, 15, 12, 18, 27, 62, 45],
+  'Total_Acres_2022': [2481, 0, 38, 65, 0, 0, 484, 0, 312, 300, 87, 51, 232, 212, 41, 5, 86, 38, 286, 175],
+  'Bearing_Age_Farms_2022': [370, 4, 6, 12, 1, 0, 6, 0, 18, 86, 9, 18, 35, 33, 13, 12, 14, 23, 51, 29],
+  'Bearing_Age_Acres_2022': [2238, 0, 35, 46, 0, 0, 0, 0, 303, 275, 78, 42, 179, 200, 36, 0, 61, 36, 246, 155],
+  'Nonbearing_Age_Farms_2022': [236, 12, 5, 13, 2, 0, 4, 0, 9, 42, 10, 3, 23, 36, 9, 6, 10, 5, 23, 24],
+  'Nonbearing_Age_Acres_2022': [243, 0, 3, 19, 0, 0, 0, 0, 9, 25, 9, 9, 53, 11, 5, 0, 26, 2, 40, 21],
+  'Total_Farms_2017': [489, 20, 3, 20, 3, 0, 8, 1, 34, 104, 20, 12, 35, 35, 10, 4, 13, 36, 69, 57],
+  'Total_Acres_2017': [2232, 53, 30, 109, 0, 0, 352, 0, 271, 282, 76, 42, 210, 151, 18, 0, 81, 33, 242, 234],
+  'Bearing_Age_Farms_2017': [384, 15, 3, 13, 3, 0, 7, 0, 26, 85, 18, 11, 33, 34, 5, 2, 9, 26, 41, 47],
+  'Bearing_Age_Acres_2017': [1914, 51, 0, 103, 0, 0, 0, 0, 258, 215, 64, 40, 190, 138, 16, 0, 17, 28, 186, 184],
+  'Nonbearing_Age_Farms_2017': [201, 7, 2, 10, 0, 0, 2, 0, 13, 32, 8, 5, 9, 16, 7, 2, 6, 17, 39, 26],
+  'Nonbearing_Age_Acres_2017': [319, 2, 0, 6, 0, 0, 0, 0, 14, 67, 12, 2, 20, 13, 2, 0, 65, 5, 56, 49]
+}
+
+plot_fruit_data(Apples_data, "Apples")
+_________________________________________________________
+
+- The new function will then allow you to view the data as 4 easily understandable graphs.
