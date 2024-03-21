@@ -6,7 +6,8 @@ Breakdown of how the data was manipulated to start the function:
   - Separate the data by year and either farms / acres by selecting the columns.
   - - - MELT
   - - - - Geopgraphic Area needs to be changed into an identifier so it can be the X-axis.
-  - - - - Select the column you want to be the variable, then name it something other than the original column (in this case, Acres or number of Farms).        
+  - - - - Select the column you want to be the variable, then name it something other than the original column 
+  - - - - (in this case, Acres or number of Farms).        
 
 def plot_fruit_data(data, fruit_name):
     df = pd.DataFrame(data)
