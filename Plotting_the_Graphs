@@ -1,0 +1,23 @@
+Continuation of building the function "plot_fruit_data":
+    The plotting portion:
+      - Figure size 18 x 12 seemed like it would be able to fit everything without being too small.
+      - Subplot created a 2x2 grid and let me control which graph goes where.
+      - Picked the easily digestable bar chart.
+        - - used the melted data, in graph 1 I used 2022 Acres because that's ultimately what I want to have eyes on.
+        - - Geographic Area as X-axis, Y-axis being the amount
+        - - hue let me differentiate the bars with colors (shown in legend)
+      - Title of the graph was tied in with the name you enter in the function followed by "Acres in 2022"
+        - - - plt_fruit_data(data, fruit_name) - - - what you enter in fruit_name is in the title
+      - Labeled the X-axis "Geographic Area", Y-axis "Acres"
+      - Rotated the X-axis text by 45-degrees to give viewer a chance at absorbing it.
+      - Added title for the legend for viewer to read colors of bars earlier (reflects "hue" in sns.barplot)
+
+    # Plotting for Acres in 2022
+    plt.figure(figsize=(18, 12))
+    plt.subplot(2, 2, 1)
+    sns.barplot(data=df_2022_acres_melted, x='Geographic_Area', y='Acres', hue='Acres_Type')
+    plt.title(f'{fruit_name} Acres in 2022')
+    plt.xlabel('Geographic Area')
+    plt.ylabel('Acres')
+    plt.xticks(rotation=45)
+    plt.legend(title='Acres Type')
