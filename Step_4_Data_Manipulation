@@ -3,6 +3,7 @@ To make my life significantly easier, I defined a process which carves the given
 
 Breakdown of how the data was manipulated to start the function:
   - Create a dataframe with the supplied data (copy and pasted from CGPT).
+  - Remove the "New Jersey" column to avoid skewing the graphs.
   - Separate the data by year and either farms / acres by selecting the columns.
   - - - MELT
   - - - - Geopgraphic Area needs to be changed into an identifier so it can be the X-axis.
